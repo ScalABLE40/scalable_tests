@@ -1,0 +1,10 @@
+<launch>
+	<include file="$(find iiwa_moveit)/launch/moveit_planning_execution.launch">
+	 	<arg name="sim" value="true" doc="If true, the robot will be simulated in Gazebo" />
+	    <arg name="hardware_interface" value="PositionJointInterface"/>
+	    <arg name="robot_name" value="iiwa"/>
+	    <arg name="model" value="iiwa14"/>
+	    <arg name="rviz" value="false" />
+	    <arg name="gui"	value="true" />
+	</include>
+</launch>

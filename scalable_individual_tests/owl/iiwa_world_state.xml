@@ -1,0 +1,396 @@
+@prefix : <> .
+@prefix SUMO: <http://www.semanticweb.org/ontologies/2013/7/RobotsAutomation.owl#SUMO:> .
+@prefix cora: <http://www.inf.ufrgs.br/phi-group/ontologies/cora.owl#> .
+@prefix coraX: <http://www.inf.ufrgs.br/phi-group/ontologies/coraX#> .
+@prefix coraX1: <http://www.inf.ufrgs.br/phi-group/ontologies/coraX.owl#> .
+@prefix corax: <http://www.inf.ufrgs.br/phi-group/ontologies/coraX.owl#> .
+@prefix default1: <> .
+@prefix default11: <> .
+@prefix default2: <> .
+@prefix default21: <> .
+@prefix default3: <> .
+@prefix default31: <> .
+@prefix default4: <> .
+@prefix default41: <> .
+@prefix default5: <> .
+@prefix default51: <> .
+@prefix default6: <> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix owl2xml: <http://www.w3.org/2006/12/owl2-xml#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rparts: <http://www.inf.ufrgs.br/phi-group/ontologies/RParts.owl#> .
+@prefix skiros: <http://rvmi.aau.dk/ontologies/skiros.owl#> .
+@prefix sumo: <http://www.inf.ufrgs.br/phi-group/ontologies/sumo.owl#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix xyz: <http://rvmi.aau.dk/ontologies/xyz.owl#> .
+
+skiros:CartesianMove-27 a skiros:CartesianMove,
+        owl:NamedIndividual ;
+    rdfs:label "cartesian_move"^^xsd:string ;
+    skiros:hasParam skiros:Parameter-28,
+        skiros:Parameter-29 .
+
+skiros:ExecuteTrajectory-11 a skiros:ExecuteTrajectory,
+        owl:NamedIndividual ;
+    rdfs:label "execute_trajectory"^^xsd:string ;
+    skiros:hasParam skiros:Parameter-12 .
+
+skiros:ExecuteTrajectory-18 a skiros:ExecuteTrajectory,
+        owl:NamedIndividual ;
+    rdfs:label "execute_trajectory"^^xsd:string ;
+    skiros:hasParam skiros:Parameter-19 .
+
+skiros:ExecuteTrajectory-6 a skiros:ExecuteTrajectory,
+        owl:NamedIndividual ;
+    rdfs:label "execute_trajectory"^^xsd:string ;
+    skiros:hasParam skiros:Parameter-7 .
+
+skiros:Parameter-31 a skiros:Parameter,
+        owl:NamedIndividual ;
+    rdfs:label "Robot"^^xsd:string ;
+    skiros:DataType "sumo:Agent"^^xsd:string ;
+    skiros:ParameterType 3 ;
+    rdfs:comment ""^^xsd:string .
+
+skiros:PlanArticular-24 a skiros:PlanArticular,
+        owl:NamedIndividual ;
+    rdfs:label "plan_articular"^^xsd:string ;
+    skiros:hasParam skiros:Parameter-25,
+        skiros:Parameter-26 .
+
+skiros:PlanCartesian-20 a skiros:PlanCartesian,
+        owl:NamedIndividual ;
+    rdfs:label "plan_cartesian"^^xsd:string ;
+    skiros:hasParam skiros:Parameter-21,
+        skiros:Parameter-22,
+        skiros:Parameter-23 .
+
+skiros:PlanTrajectory-13 a skiros:PlanTrajectory,
+        owl:NamedIndividual ;
+    rdfs:label "plan_trajectory"^^xsd:string ;
+    skiros:hasParam skiros:Parameter-14,
+        skiros:Parameter-15 .
+
+skiros:PlanTrajectory-8 a skiros:PlanTrajectory,
+        owl:NamedIndividual ;
+    rdfs:label "plan_trajectory"^^xsd:string ;
+    skiros:hasParam skiros:Parameter-10,
+        skiros:Parameter-9 .
+
+skiros:Scene-0 a skiros:Scene,
+        owl:NamedIndividual ;
+    rdfs:label ""^^xsd:string ;
+    skiros:BaseFrameId ""^^xsd:string ;
+    skiros:DiscreteReasoner "AauSpatialReasoner"^^xsd:string ;
+    skiros:FrameId "map"^^xsd:string ;
+    skiros:OrientationW "1.0"^^xsd:float ;
+    skiros:OrientationX "0.0"^^xsd:float ;
+    skiros:OrientationY "0.0"^^xsd:float ;
+    skiros:OrientationZ "0.0"^^xsd:float ;
+    skiros:PositionX "0.0"^^xsd:float ;
+    skiros:PositionY "0.0"^^xsd:float ;
+    skiros:PositionZ "0.0"^^xsd:float ;
+    skiros:PublishTf true ;
+    skiros:contain skiros:Location-16,
+        skiros:Location-17,
+        skiros:Location-5,
+        cora:Robot-1 .
+
+skiros:Camera-4 a skiros:Camera,
+        owl:NamedIndividual ;
+    rdfs:label "skiros:test_camera"^^xsd:string ;
+    skiros:StateProperty "Idle"^^xsd:string ;
+    skiros:Template "skiros:test_camera"^^xsd:string .
+
+skiros:CartesianMove a <owl:class> ;
+    rdfs:subClassOf skiros:Skill .
+
+skiros:ExecuteTrajectory-30 a skiros:ExecuteTrajectory,
+        owl:NamedIndividual ;
+    rdfs:label "execute_trajectory" ;
+    skiros:hasParam skiros:Parameter-32,
+        skiros:Parameter-33 .
+
+skiros:Location-16 a skiros:Location,
+        owl:NamedIndividual ;
+    rdfs:label "target_location" ;
+    skiros:BaseFrameId "map" ;
+    skiros:DiscreteReasoner "AauSpatialReasoner" ;
+    skiros:FrameId "target_location" ;
+    skiros:OrientationW 5.020927e-01 ;
+    skiros:OrientationX -5.16529e-01 ;
+    skiros:OrientationY 4.973604e-01 ;
+    skiros:OrientationZ -4.834598e-01 ;
+    skiros:PositionX 4.350518e-01 ;
+    skiros:PositionY 1.479166e-01 ;
+    skiros:PositionZ 6.811252e-01 ;
+    skiros:PublishTf true ;
+    skiros:Template "skiros:Location-5" .
+
+skiros:Location-17 a skiros:Location,
+        owl:NamedIndividual ;
+    rdfs:label "target_location2" ;
+    skiros:BaseFrameId "map" ;
+    skiros:DiscreteReasoner "AauSpatialReasoner" ;
+    skiros:FrameId "target_location2" ;
+    skiros:OrientationW 6.971315e-01 ;
+    skiros:OrientationX -7.166911e-01 ;
+    skiros:OrientationY 1.555691e-02 ;
+    skiros:OrientationZ 1.093533e-02 ;
+    skiros:PositionX -7.131457e-03 ;
+    skiros:PositionY 5.17502e-01 ;
+    skiros:PositionZ 6.437244e-01 ;
+    skiros:PublishTf true ;
+    skiros:Template "skiros:Location-5" .
+
+skiros:Location-5 a skiros:Location,
+        owl:NamedIndividual ;
+    rdfs:label "skiros:unknown_location"^^xsd:string ;
+    skiros:BaseFrameId "map"^^xsd:string ;
+    skiros:DiscreteReasoner "AauSpatialReasoner"^^xsd:string ;
+    skiros:FrameId "skiros:Location-5"^^xsd:string ;
+    skiros:PublishTf true ;
+    skiros:Template "skiros:unknown_location"^^xsd:string .
+
+skiros:MoveArm a owl:class ;
+    rdfs:subClassOf skiros:Skill .
+
+skiros:MoveArm-41 a skiros:MoveArm,
+        owl:NamedIndividual ;
+    rdfs:label "cartesian_move" ;
+    skiros:hasParam skiros:Parameter-42,
+        skiros:Parameter-43,
+        skiros:Parameter-44 .
+
+skiros:Parameter-10 a skiros:Parameter,
+        owl:NamedIndividual ;
+    rdfs:label "Robot"^^xsd:string ;
+    skiros:DataType "sumo:Agent"^^xsd:string ;
+    skiros:ParameterType 3 ;
+    rdfs:comment ""^^xsd:string .
+
+skiros:Parameter-12 a skiros:Parameter,
+        owl:NamedIndividual ;
+    rdfs:label "Robot"^^xsd:string ;
+    skiros:DataType "sumo:Agent"^^xsd:string ;
+    skiros:ParameterType 3 ;
+    rdfs:comment ""^^xsd:string .
+
+skiros:Parameter-14 a skiros:Parameter,
+        owl:NamedIndividual ;
+    rdfs:label "TargetPosition"^^xsd:string ;
+    skiros:DataType "skiros:Location"^^xsd:string ;
+    skiros:ParameterType 0 ;
+    rdfs:comment ""^^xsd:string .
+
+skiros:Parameter-15 a skiros:Parameter,
+        owl:NamedIndividual ;
+    rdfs:label "Robot"^^xsd:string ;
+    skiros:DataType "sumo:Agent"^^xsd:string ;
+    skiros:ParameterType 3 ;
+    rdfs:comment ""^^xsd:string .
+
+skiros:Parameter-19 a skiros:Parameter,
+        owl:NamedIndividual ;
+    rdfs:label "Robot"^^xsd:string ;
+    skiros:DataType "sumo:Agent"^^xsd:string ;
+    skiros:ParameterType 3 ;
+    rdfs:comment ""^^xsd:string .
+
+skiros:Parameter-21 a skiros:Parameter,
+        owl:NamedIndividual ;
+    rdfs:label "TargetPosition"^^xsd:string ;
+    skiros:DataType "skiros:Location"^^xsd:string ;
+    skiros:ParameterType 0 ;
+    rdfs:comment ""^^xsd:string .
+
+skiros:Parameter-22 a skiros:Parameter,
+        owl:NamedIndividual ;
+    rdfs:label "Plan"^^xsd:string ;
+    skiros:ParameterType 1 ;
+    rdfs:comment ""^^xsd:string .
+
+skiros:Parameter-23 a skiros:Parameter,
+        owl:NamedIndividual ;
+    rdfs:label "Robot"^^xsd:string ;
+    skiros:DataType "sumo:Agent"^^xsd:string ;
+    skiros:ParameterType 3 ;
+    rdfs:comment ""^^xsd:string .
+
+skiros:Parameter-25 a skiros:Parameter,
+        owl:NamedIndividual ;
+    rdfs:label "Plan"^^xsd:string ;
+    skiros:ParameterType 1 ;
+    rdfs:comment ""^^xsd:string .
+
+skiros:Parameter-26 a skiros:Parameter,
+        owl:NamedIndividual ;
+    rdfs:label "Robot"^^xsd:string ;
+    skiros:DataType "sumo:Agent"^^xsd:string ;
+    skiros:ParameterType 3 ;
+    rdfs:comment ""^^xsd:string .
+
+skiros:Parameter-28 a skiros:Parameter,
+        owl:NamedIndividual ;
+    rdfs:label "TargetPosition"^^xsd:string ;
+    skiros:DataType "skiros:Location"^^xsd:string ;
+    skiros:ParameterType 0 ;
+    rdfs:comment ""^^xsd:string .
+
+skiros:Parameter-29 a skiros:Parameter,
+        owl:NamedIndividual ;
+    rdfs:label "Robot"^^xsd:string ;
+    skiros:DataType "sumo:Agent"^^xsd:string ;
+    skiros:ParameterType 3 ;
+    rdfs:comment ""^^xsd:string .
+
+skiros:Parameter-32 a skiros:Parameter,
+        owl:NamedIndividual ;
+    rdfs:label "Arm" ;
+    skiros:DataType "rparts:ArmDevice"^^xsd:string ;
+    skiros:ParameterType 0 ;
+    rdfs:comment ""^^xsd:string .
+
+skiros:Parameter-33 a skiros:Parameter,
+        owl:NamedIndividual ;
+    rdfs:label "Robot" ;
+    skiros:DataType "sumo:Agent"^^xsd:string ;
+    skiros:ParameterType 0 ;
+    rdfs:comment ""^^xsd:string .
+
+skiros:Parameter-35 a skiros:Parameter,
+        owl:NamedIndividual ;
+    rdfs:label "TargetPosition" ;
+    skiros:DataType "sumo:Object"^^xsd:string ;
+    skiros:ParameterType 0 ;
+    rdfs:comment ""^^xsd:string .
+
+skiros:Parameter-36 a skiros:Parameter,
+        owl:NamedIndividual ;
+    rdfs:label "Robot" ;
+    skiros:DataType "sumo:Agent"^^xsd:string ;
+    skiros:ParameterType 0 ;
+    rdfs:comment ""^^xsd:string .
+
+skiros:Parameter-37 a skiros:Parameter,
+        owl:NamedIndividual ;
+    rdfs:label "Arm" ;
+    skiros:DataType "rparts:ArmDevice"^^xsd:string ;
+    skiros:ParameterType 0 ;
+    rdfs:comment ""^^xsd:string .
+
+skiros:Parameter-39 a skiros:Parameter,
+        owl:NamedIndividual ;
+    rdfs:label "Robot" ;
+    skiros:DataType "sumo:Agent"^^xsd:string ;
+    skiros:ParameterType 0 ;
+    rdfs:comment ""^^xsd:string .
+
+skiros:Parameter-40 a skiros:Parameter,
+        owl:NamedIndividual ;
+    rdfs:label "Arm" ;
+    skiros:DataType "rparts:ArmDevice"^^xsd:string ;
+    skiros:ParameterType 0 ;
+    rdfs:comment ""^^xsd:string .
+
+skiros:Parameter-42 a skiros:Parameter,
+        owl:NamedIndividual ;
+    rdfs:label "TargetPosition" ;
+    skiros:DataType "sumo:Object"^^xsd:string ;
+    skiros:ParameterType 0 ;
+    rdfs:comment ""^^xsd:string .
+
+skiros:Parameter-43 a skiros:Parameter,
+        owl:NamedIndividual ;
+    rdfs:label "Arm" ;
+    skiros:DataType "rparts:ArmDevice"^^xsd:string ;
+    skiros:ParameterType 0 ;
+    rdfs:comment ""^^xsd:string .
+
+skiros:Parameter-44 a skiros:Parameter,
+        owl:NamedIndividual ;
+    rdfs:label "Robot" ;
+    skiros:DataType "sumo:Agent"^^xsd:string ;
+    skiros:ParameterType 0 ;
+    rdfs:comment ""^^xsd:string .
+
+skiros:Parameter-7 a skiros:Parameter,
+        owl:NamedIndividual ;
+    rdfs:label "Robot"^^xsd:string ;
+    skiros:DataType "sumo:Agent"^^xsd:string ;
+    skiros:ParameterType 3 ;
+    rdfs:comment ""^^xsd:string .
+
+skiros:Parameter-9 a skiros:Parameter,
+        owl:NamedIndividual ;
+    rdfs:label "TargetPosition"^^xsd:string ;
+    skiros:DataType "skiros:Location"^^xsd:string ;
+    skiros:ParameterType 0 ;
+    rdfs:comment ""^^xsd:string .
+
+skiros:PlanArticular-38 a skiros:PlanArticular,
+        owl:NamedIndividual ;
+    rdfs:label "plan_articular" ;
+    skiros:hasParam skiros:Parameter-39,
+        skiros:Parameter-40 .
+
+skiros:PlanCartesian-34 a skiros:PlanCartesian,
+        owl:NamedIndividual ;
+    rdfs:label "plan_cartesian" ;
+    skiros:hasParam skiros:Parameter-35,
+        skiros:Parameter-36,
+        skiros:Parameter-37 .
+
+rparts:ArmDevice-2 a rparts:ArmDevice,
+        owl:NamedIndividual ;
+    rdfs:label "skiros:test_arm"^^xsd:string ;
+    skiros:Template "skiros:test_arm"^^xsd:string ;
+    skiros:MoveItGroup "manipulator" ;
+    skiros:MotionExe "/follow_joint_trajectory";
+    skiros:hasA skiros:Camera-4,
+        rparts:GripperEffector-3 .
+
+rparts:GripperEffector-3 a rparts:GripperEffector,
+        owl:NamedIndividual ;
+    rdfs:label "skiros:test_gripper"^^xsd:string ;
+    skiros:ContainerState "Empty"^^xsd:string ;
+    skiros:Template "skiros:test_gripper"^^xsd:string .
+
+cora:Robot-1 a cora:Robot,
+        owl:NamedIndividual ;
+    rdfs:label ":test_robot" ;
+    skiros:BaseFrameId "map" ;
+    skiros:DiscreteReasoner "AauSpatialReasoner" ;
+    skiros:FrameId "base_link" ;
+    skiros:MoveItGroup "manipulator" ;
+    skiros:OrientationW 1e+00 ;
+    skiros:OrientationX 0e+00 ;
+    skiros:OrientationY 0e+00 ;
+    skiros:OrientationZ 0e+00 ;
+    skiros:PositionX 0e+00 ;
+    skiros:PositionY 0e+00 ;
+    skiros:PositionZ 0e+00 ;
+    skiros:PublishTf true ;
+    skiros:SkillMgr "test_robot" ;
+    skiros:Template ":test_robot" ;
+    skiros:hasA rparts:ArmDevice-2 ;
+    skiros:hasSkill skiros:ExecuteTrajectory-30,
+        skiros:MoveArm-41,
+        skiros:PlanArticular-38,
+        skiros:PlanCartesian-34 .
+
+skiros:PlanArticular a <owl:class> ;
+    rdfs:subClassOf skiros:Skill .
+
+skiros:PlanCartesian a <owl:class> ;
+    rdfs:subClassOf skiros:Skill .
+
+skiros:PlanTrajectory a owl:class,
+        <owl:class> ;
+    rdfs:subClassOf skiros:Skill .
+
+skiros:ExecuteTrajectory a owl:class,
+        <owl:class> ;
+    rdfs:subClassOf skiros:Skill .

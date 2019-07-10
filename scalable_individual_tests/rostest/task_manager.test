@@ -1,0 +1,4 @@
+<launch>
+  <include file="$(find scalable_indivual_tests)/launch/run.launch"/>
+  <test test-name="integration_tests" type="test_tm.py" pkg="scalable_indivual_tests"/>
+</launch>

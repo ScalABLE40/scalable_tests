@@ -1,0 +1,6 @@
+<launch>
+  <include file="$(find scalable_indivual_tests)/launch/turtlesim_example.launch">
+    <arg name="gui" value="false"/>
+  </include>
+  <test test-name="integration_tests" type="test_skiros2.py" pkg="scalable_indivual_tests"/>
+</launch>

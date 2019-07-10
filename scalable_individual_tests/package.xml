@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>scalable_individual_tests</name>
+  <version>0.0.0</version>
+  <description>The scalable tests package for each packages</description>
+
+  <maintainer email="led@ipa.fraunhofer.de">led</maintainer>
+
+  <license>APACHE2.0</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <test_depend>rostest</test_depend>
+  <test_depend>rospy</test_depend>
+  <test_depend>iiwa_ros</test_depend>
+  <test_depend>iiwa_gazebo</test_depend>
+  <test_depend>skiros2</test_depend>
+  <test_depend>task_manager_common</test_depend>
+  <test_depend>task_manager</test_depend>
+
+
+  <export>
+
+  </export>
+</package>

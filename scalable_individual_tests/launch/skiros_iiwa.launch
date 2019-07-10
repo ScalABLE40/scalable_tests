@@ -1,0 +1,28 @@
+<launch>
+  <arg name="primitive_list" default="[execute_trajectory, plan_articular]"/>
+  <arg name="skill_list" default="[articular_move]"/>
+  <arg name="debug" default="false"/>
+  <arg name="robot_ontology_prefix" default=""/>
+  <arg name="robot_name" default="test_robot"/>
+  <arg name="init_scene" default="iiwa_world_state.xml"/>
+  <arg name="gui" default="true"/>
+
+  <include file="$(find skiros2)/launch/world_model_server.launch">
+      <arg name="init_scene" value="$(arg init_scene)"/>
+      <arg name="verbose" value="false"/>
+      <arg name="reasoners_pkgs" value="[skiros2_std_reasoners]"/>
+      <arg name="workspace_dir" value="$(find scalable_tests)/owl"/>
+      <arg name="debug" value="$(arg debug)"/>
+      <arg name="gui" value="$(arg gui)"/>
+  </include>
+
+  <include file="$(find skiros2)/launch/skill_mgr.launch">
+      <arg name="verbose" value="false"/>
+      <arg name="debug" value="$(arg debug)"/>
+      <arg name="libraries_list" value="[scalable_skills_aau]"/>
+      <arg name="primitive_list" value="$(arg primitive_list)"/>
+      <arg name="skill_list" value="$(arg skill_list)" />
+      <arg name="robot_ontology_prefix" value="$(arg robot_ontology_prefix)"/>
+      <arg name="robot_name" value="$(arg robot_name)"/>
+  </include>
+</launch>

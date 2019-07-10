@@ -1,0 +1,11 @@
+<launch>
+  <arg name="gui" default="false"/>
+  <include file="$(find scalable_indivual_tests)/launch/skiros_iiwa.launch">
+  	<arg name="init_scene" value="iiwa_world_state.xml"/>
+    <arg name="gui" default="$(arg gui)"/>
+  </include>
+  <group>
+			<include file="$(find scalable_indivual_tests)/launch/sim_iiwa.launch"/>
+  </group>
+  <include file="$(find skill_hardware_remapper)/launch/iiwa_remapper.launch"/>
+</launch>

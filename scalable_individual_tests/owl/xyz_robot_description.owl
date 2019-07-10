@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://rvmi.aau.dk/ontologies/xyz.owl#"
+     xml:tts="http://rvmi.aau.dk/ontologies/xyz.owl"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skiros="http://rvmi.aau.dk/ontologies/skiros.owl#"
+     xmlns:tts="http://rvmi.aau.dk/ontologies/xyz.owl#">
+    <owl:Ontology rdf:about="http://rvmi.aau.dk/ontologies/xyz.owl">
+        <owl:imports rdf:resource="http://rvmi.aau.dk/ontologies/skiros.owl"/>
+    </owl:Ontology>
+
+
+    <owl:NamedIndividual rdf:about="http://rvmi.aau.dk/ontologies/scalable.owl#iiwa7">
+        <rdf:type rdf:resource="http://rvmi.aau.dk/ontologies/scalable.owl#Iiwa"/>
+        <skiros:DiscreteReasoner>AauSpatialReasoner</skiros:DiscreteReasoner>
+        <skiros:LinkedToFrameId>sr_link_0</skiros:LinkedToFrameId>
+        <skiros:MotionExe>sr/PositionJointInterface_trajectory_controller/follow_joint_trajectory</skiros:MotionExe>
+        <skiros:MotionPlanner>sr/plan_action</skiros:MotionPlanner>
+        <skiros:MoveItGroup>manipulator</skiros:MoveItGroup>
+    </owl:NamedIndividual>
+</rdf:RDF>
