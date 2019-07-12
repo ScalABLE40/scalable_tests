@@ -1,0 +1,34 @@
+<launch>
+     <arg name="host" default="ws.msb.scalable.atm.virtualfortknox.de"/>
+	<node name="msb_ros_bridge" pkg="vfk_msb_client" type="msb_ros_bridge.py" output="screen">
+		<!-- MSB to connect to -->
+		<param name="host" value="ws://$(arg host)" />
+
+		<!-- UUID for connection -->
+		<param name="uuid" value="scalable40test" />
+
+		<!-- Name for connection -->
+		<param name="name" value="TestObject_CI" />
+
+		<!-- Description for connection -->
+		<param name="desc" value="Testing Object for Continuous Integration Scenario " />
+
+		<!-- Token for connection -->
+		<param name="token" value="testingtoken" />
+
+		<!-- Topics to subscribe in ros -->
+		<param name="topics_sub" value="
+                /CI/Scalable/Trigger std_msgs/String,
+                /CI/Scalable/StringSub std_msgs/String" 
+			/>
+
+		<!-- Topics to publish in ROS -->
+		<param name="topics_pub" value="
+                /CI/Scalable/AnswerTrigger std_msgs/String,
+                /CI/Scalable/StringPub std_msgs/String"
+    		/>
+
+		<!-- Register all topics as string and send json to MSB -->
+		<param name="json_only" value="True" />
+	</node>
+</launch>

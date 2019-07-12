@@ -1,0 +1,27 @@
+#!/usr/bin/env python
+import rospy
+import std_msgs.msg
+import sys
+
+rospy.init_node("vfk_pub_node")
+pub_trigger = rospy.Publisher("/CI/Scalable/Trigger", std_msgs.msg.String, queue_size=1)
+pub_string = rospy.Publisher("/CI/Scalable/StringSub", std_msgs.msg.String, queue_size=1)
+try:
+    rospy.wait_for_message("/CI/Scalable/Start", std_msgs.msg.Empty, 60.0)
+except rospy.ROSException as ex:
+    sys.exit(-1)
+rospy.sleep(1.0)
+pub_trigger.publish(std_msgs.msg.String(""))
+try:
+    rospy.wait_for_message("/CI/Scalable/Trigger_next", std_msgs.msg.Empty, 60.0)
+except rospy.ROSException as ex:
+    sys.exit(-1)
+rospy.sleep(1.0)
+pub_string.publish(std_msgs.msg.String("This is a CI message. Please ignore"))
+try:
+    rospy.wait_for_message("/CI/Scalable/End", std_msgs.msg.Empty, 60.0)
+except rospy.ROSException as ex:
+    sys.exit(-1)
+rospy.sleep(1.0)
+sys.exit(0)
+

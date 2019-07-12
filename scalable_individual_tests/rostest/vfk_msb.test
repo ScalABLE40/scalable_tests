@@ -1,0 +1,5 @@
+<launch>
+  <include file="$(find scalable_individual_tests)/launch/vfk_msb_client.launch"/>
+  <node name="trigger_node" pkg="scalable_individual_tests" type="pub_node_vfk_msb"/>
+  <test test-name="test_vfk_msb_client" type="test_vfk_msb.py" pkg="scalable_individual_tests"/>
+</launch>
