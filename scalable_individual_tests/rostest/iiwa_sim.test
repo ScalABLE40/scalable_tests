@@ -1,4 +1,4 @@
 <launch>
-  <include file="$(find scalable_indivual_tests)/launch/sim_iiwa.launch"/>
-  <test test-name="test_iiwa" type="test_iiwa.py" pkg="scalable_indivual_tests"/>
+  <include file="$(find scalable_individual_tests)/launch/sim_iiwa.launch"/>
+  <test test-name="test_iiwa" type="test_iiwa.py" pkg="scalable_individual_tests"/>
 </launch>
