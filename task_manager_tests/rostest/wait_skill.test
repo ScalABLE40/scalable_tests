@@ -1,0 +1,6 @@
+<launch>
+  <include file="$(find task_manager_pseudo_pm)/launch/run.launch"/>
+  <include file="$(find task_manager)/launch/run.launch"/>
+  <include file="$(find wait_skill_server)/launch/run.launch"/>
+  <test test-name="test_task_manager_wait_skill" type="test_wait_skill.py" pkg="task_manager_tests"/>
+</launch>

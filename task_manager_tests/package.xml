@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>task_manager_tests</name>
+  <version>0.0.0</version>
+  <description>The task_manager tests package for skills</description>
+
+  <maintainer email="led@ipa.fraunhofer.de">led</maintainer>
+
+  <license>APACHE2.0</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <test_depend>rostest</test_depend>
+  <test_depend>rospy</test_depend>
+  <test_depend>task_manager_common</test_depend>
+  <test_depend>task_manager</test_depend>
+  <test_depend>wait_skill</test_depend>
+
+  <export>
+
+  </export>
+</package>
